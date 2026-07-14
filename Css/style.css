@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 100%; */
+}
+h1, h2, h3{
+    font-weight: 400 !important;
+    font-family: 'Playball', cursive !important;
+}
+h4, h5, h6{
+    font-weight: 600 !important;
+    font-family: 'Open Sans', sans-serif !important;
+}
+.py-6 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+.my-6 {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+.wow{
+    animation-duration: 2s !important;
+    /* visibility: hidden; */
+}
+
+.animated {
+    animation-duration: 2s !important;
+}
+.test {
+    border: 3px solid rgb(60, 57, 57);
+}
+
+
+:root {
+    --primary-color: #D4A762;
+    --secondary-color: #9A9A9A;
+    --Tertiary-color:#fffcf8;
+
+}
+
+/* Color */
+.black{
+    color: black;
+}
+.primary-color {
+    color: var(--primary-color);
+}
+.bg-primary-color {
+    background-color: var(--primary-color);
+}
+.br-primary-color {
+    border: 1px solid var(--primary-color);
+}
+.secondary-color {
+    color: var(--secondary-color);
+}
+.bg-secondary-color{
+    background-color: var(--Tertiary-color);
+}
+
+
+
+/* Button */
+.btn-square{
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+.my-btn{
+    background-color: var(--primary-color);
+    color:black ;
+    text-align: center;
+    font-weight: 700;
+    text-transform: capitalize;
+    cursor: pointer;
+    border-radius: 50em;
+    text-decoration: none;
+    transition: 1s;
+    &:hover{
+        background-color: black;
+        color: var(--primary-color);
+        transition: 0.3s;
+    }
+}
+.my-btn2{
+    background-color: var(--Tertiary-color);
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor:text;
+    border-radius: 50em;
+    border: 1px solid var(--primary-color);
+    display: inline-block;
+    padding:4px 24px 4px 24px;
+}
+
+/* Service */
+.service-card{
+    position: relative;
+    background-color: var(--Tertiary-color);
+    border-radius: 8px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: 0.5s;
+    
+    &:hover{
+        .card-overlay::after{
+            height: 100%;
+        }
+        .icon{
+            color: #000000;
+        }
+        .card-content>p{
+            color: #fff;
+        }
+        .my-btn{
+            background-color: #fff;
+            color: #212529;
+        }
+    }
+}
+.card-overlay{
+    position: relative;
+    &::after{
+        content:"";
+        position: absolute;
+        top: 0;left: 0;
+        width: 100%;height: 0;
+        background-color:var(--primary-color) ;
+        transition: 1s;
+        z-index: 1;
+        border-radius: 8px;
+    }
+}
+.card-content{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+    >i{
+        color:var(--primary-color);
+        transition: 1s;
+    }
+    >p{
+    color: #9A9A9A;
+    transition: 0.5s;
+    }
+}
+
+/* footer */
+.footer-item{
+    >a{
+        color:#6c757d;
+        &:hover{
+            color: var(--primary-color);
+        }
+    }
+}
+
+
